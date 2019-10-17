@@ -1,51 +1,57 @@
-"Enter max Points:You entered:Enter Points:Per Cent achieved:"
+"Enter max Points:You entered:Enter Points:Percent achieved:"
 inc 12
 
-out 3
+out 3     #newline
 lit 0     # address
 lit 17    # string length
 lit 18    # col width
-out 2     # out string
+out 2     # output string
 
-la 0 50   # a
-la 0 54   # addr to store success flag
-in 0
-sto
-out 3
+la 0 50   # address
+la 0 54   # check
+in 0      # input int
+sto       # storage
+out 3     # newline
 
-lit 17
+# output string
+lit 17    # string length
 lit 12
 lit 13
 out 2
 
-lv 0 50
-lit 1
+lv 0 50   #address output
+lit 1     #length 1 = int
 out 0     # out int
 out 3     # new line
 out 3
 
+# output string
 lit 29
 lit 13
 lit 14
 out 2
-la 0 58   #b
+
+la 0 58   # b
 la 0 62
-in 0
+in 0      # input int
 sto
 
-la 0 66     #c
-lv 0 58     #b
-lit 100
-mul
-lv 0 50     #a
-div
+la 0 66     # address c
+lv 0 58     # b
+lit 100     # c
+mul         # mul b*c
+lv 0 50     # a
+div         # div /a
 sto
 out 3
 
+# output string
 lit 42
 lit 18
 lit 19
 out 2
+
+# output int
 lv 0 66
 lit 1
 out 0
